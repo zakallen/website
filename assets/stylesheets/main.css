@@ -74,9 +74,12 @@ a:not(.icon) {
     font-style: italic;
     color: #6bc1b6
 }
+a:not(.icon):hover {
+    text-decoration: underline
+}
 
 .title img {
-    max-height: 6.4rem;
+    max-height: 10.4rem;
     margin-bottom: 2.13333rem
 }
 
@@ -228,7 +231,8 @@ h3,
         left: 3.2rem
     }
     [data-page='landing']>section>.navigation {
-        margin-top: 3.2rem
+        margin-top: 3.2rem;
+        width: 100%;
     }
 }
 
@@ -684,42 +688,62 @@ h3,
 }
 
 @font-face {
-    font-family: 'icomoon';
-    font-style: normal;
-    font-weight: normal;
-    src: url("../fonts/icomoon.eot");
-    src: url("../fonts/icomoon.eot") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg")
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?swha3s');
+  src:  url('../fonts/icomoon.eot?swha3s#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?swha3s') format('truetype'),
+    url('../fonts/icomoon.woff?swha3s') format('woff'),
+    url('../fonts/icomoon.svg?swha3s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-[class^="icon"],
-[class*=" icon"] {
-    font-family: 'icomoon';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-transform: none;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+[class^="icon"], [class*="icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon.linkedin:before {
-    content: "\e903"
+.icon:hover {
+    opacity: 0.8;
 }
 
-.icon.email:before {
-    content: "\e900"
+.twitter:before {
+  content: "\f099";
 }
-
-.icon.twitter:before {
-    content: "\e901"
+.facebook:before {
+  content: "\f09a";
 }
-
-.icon.github:before {
-    content: "\e902"
+.facebook-f:before {
+  content: "\f09a";
 }
-
-.icon.vcard:before {
-    content: "\e904"
+.github:before {
+  content: "\f09b";
+}
+.linkedin:before {
+  content: "\f0e1";
+}
+.instagram:before {
+  content: "\f16d";
+}
+.paper-plane:before {
+  content: "\f1d8";
+}
+.send:before {
+  content: "\f1d8";
+}
+.product-hunt:before {
+  content: "\f288";
+}
+.snapchat-ghost:before {
+  content: "\f2ac";
 }
